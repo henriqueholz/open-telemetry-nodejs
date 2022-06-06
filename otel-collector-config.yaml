@@ -1,0 +1,21 @@
+extensions:
+  health_check: {}
+receivers:
+  otlp:
+    protocols:
+      grpc:
+exporters:
+  logging:
+    logLevel: info
+  newrelic:
+    apikey: API_KEY
+  otlp/lightstep:
+    endpoint: ingest.lightstep.com:443
+    headers:
+      lightstep-access-token: "API_KEY"
+service:
+  extensions: [health_check]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      exporters: [logging, newrelic, otlp/lightstep]

@@ -1,19 +1,39 @@
 {
-  "extends": [ "standard" ],
-  "plugins": [ "json" ],
+  "extends": [
+    "standard"
+  ],
+  "plugins": [
+    "json"
+  ],
   "rules": {
     "no-unused-expressions": "off",
-    "complexity": ["error", 7],
+    "complexity": [
+      "error",
+      7
+    ],
     "eqeqeq": "error",
-    "max-statements": [ "error", { "max": 15 } ],
-    "comma-dangle": ["error", {
-      "arrays": "always-multiline",
-      "objects": "always-multiline",
-      "imports": "always-multiline",
-      "exports": "always",
-      "functions": "never"
-    }]
+    "max-statements": [
+      "error",
+      {
+        "max": 15
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always",
+        "functions": "never"
+      }
+    ]
   },
+  "quotes": [
+    2,
+    "single",
+    "avoid-escape"
+  ],
   "globals": {
     "it": true,
     "describe": true,
